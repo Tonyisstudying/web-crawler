@@ -1,0 +1,5 @@
+requests
+beautifulsoup4
+scikit-learn
+python-dateutil
+jieba
