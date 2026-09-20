@@ -235,7 +235,7 @@ Provides the command-line interface and connects all components into the complet
 Step 1 — Clone the repository
 
 git clone <YOUR_REPOSITORY_URL>
-cd big_data_project
+cd web-crawler
 
 Step 2 — Create a virtual environment
 
@@ -293,48 +293,193 @@ Save data/news.json
 
 7. Example Output
 
-Example terminal output:
+Example terminal output (real results):
+
+command:  python main.py news --url https://www.article.com/browse/224/living-furniture?page=%7B%222bQ8Rx0nhRoWhp5jSMFc1v%22%3A1%7D --limit 10
 
 [1] Discovering article links...
 Found 40 candidate links.
 
 [2] Crawling articles...
-[OK] Example news article 1
-[OK] Example news article 2
-[OK] Example news article 3
-...
-
-Crawled 28 valid articles.
+[OK] Contemporary, Mid Century & Modern Furniture | Article
+[OK] All Products
+[OK] All Rooms
+[OK] Furniture Collections
+[OK] Accessories & Decor
+[OK] Best Sellers | Article
+[OK] Contemporary, Mid Century & Modern Outdoor Patio Furniture | Article
+[OK] Ideas and Inspiration | Article
+[OK] New Arrivals
+[OK] Time to go Pro.
+[OK] Living Room
+[OK] Instant Inspiration
+[OK] Here’s the deal.
+[OK] Timber 90" Leather Sofa - Charme Tan
+[OK] Timber 90" Leather Sofa - Charme Chocolat
+[OK] Timber 90" Leather Sofa - Charme Green
+[OK] Jokuna 48" Vinyl Media Unit - Walnut
+[OK] Jokuna 48" Vinyl Media Unit - Natural Oak
+[OK] Timber 90" Leather Sofa - Charme Black
+[OK] Braam 75" Sofa Bed - Vintage White
+[OK] Braam 75" Sofa Bed - Light Miller Gray
+[OK] Braam 75" Sofa Bed - Valor Green
+[OK] Braam 75" Sofa Bed - Valor Blue
+[OK] Gabriola 34" Lounge Chair - Ivory Bouclé
+[OK] Tala 31.5" Travertine Coffee Table - Natural Oak
+[OK] Tala 31.5" Travertine Coffee Table - Walnut
+[OK] Gabriola 34" Lounge Chair - Green Wool Bouclé
+[OK] Gabriola 34" Lounge Chair - Sandstone Wool Bouclé
+[OK] Portima C Side Table - Walnut
+[OK] Gabriola 34" Lounge Chair - Dover Gray Bouclé
+[OK] Portima C Side Table - Oak
+[OK] Portima C Side Table - Sandstone Beige and White Oak
+[OK] Portima C Side Table - Black and Smoked Oak
+[OK] Ceni 88" Corner Sectional - Hemlock Green
+[OK] Ceni 88" Corner Sectional - Chalk Gray
+[OK] Ceni 88" Corner Sectional - Denim Blue
+[OK] Ceni 88" Corner Sectional - Quarry Gray
+Crawled 37 valid articles.
 
 [3] Removing similar articles...
-20 unique articles remain.
+9 unique articles remain.
 
 [4] Sorting latest news...
 
+
 ========== LATEST NEWS ==========
 
-======================================================================
-1. Example News Title
-Date: 2026-09-20T10:30:00+08:00
-URL: https://example.com/news/1
+======================================================================     
+1. Contemporary, Mid Century & Modern Furniture | Article
+Date: None
+URL: https://www.article.com/
 
 Abstract:
-Example article summary...
+Stylish, durable, long-lasting—and much easier to care for than you think. Keep your space calm and clutter free with styles that fit right in. Hanson 79" Sofa - Thistle Green
+Basi King Bed Frame - Smoked Oak
+Lubek 50" Outdoor Low Loveseat - Dravite Green
+Ulka Dining Chair - Walnut and Ratine Buff
+Otio 26" Leather Lounge Chair - Walnut and Toscana Tan
+Cooper 6-Drawer Double Dresser - Walnut
+Looking for inspo?
 
-The generated JSON is stored in:
+======================================================================     
+2. All Products
+Date: None
+URL: https://www.article.com/c/all-products
 
-data/news.json
+Abstract:
+See how real people style their Article furniture. Discover stylish modern furniture and home decor at Article. Browse our curated collection of sofas, sectionals, chairs, beds, dining tables, rugs, lighting, decor, and outdoor products.
 
-Example structure:
+======================================================================     
+3. Furniture Collections
+Date: None
+URL: https://www.article.com/c/collections
 
-[
-  {
-    "title": "Example News Title",
-    "url": "https://example.com/news/1",
-    "published_time": "2026-09-20T10:30:00+08:00",
-    "abstract": "Example article abstract..."
-  }
-]
+Abstract:
+With its broad proportions and modular pieces, the Cigar collection is a commanding design choice and laid back. With its broad proportions and modular pieces, the Cigar collection is both a commanding design choice, and also pretty laid back. The Sarek knows how to work its curves: lots of styles, sizes, and colors means there's a Sarek for your space.
+
+======================================================================     
+4. Accessories & Decor
+Date: None
+URL: https://www.article.com/browse/48/decor
+
+Abstract:
+You found the perfect pieces to make that special room in your home feel cozy, modern, and unique to you. If we can compare designing an impeccable room to baking a cake (stay with us here), the contemporary decor is the frosting on top. We’re talking those final details that make a room fully come together and add panache, from rugs to ottomans, and from lamps to mirrors.
+
+======================================================================     
+5. Best Sellers | Article
+Date: None
+URL: https://www.article.com/c/best-sellers
+
+Abstract:
+We’re confident you’ll love your new Article furniture, but just to make sure, you have 30 days to try it out. If questions arise, our friendly and knowledgeable Customer Care team is just a phone call, chat, or email away. We’re confident you’ll love your new Article furniture, but just to make sure, you have 30 days to try it out.
+
+======================================================================     
+6. Contemporary, Mid Century & Modern Outdoor Patio Furniture | Article    
+Date: None
+URL: https://www.article.com/browse/58/outdoor
+
+Abstract:
+Shop Outdoor Sofas & Sectionals
+Shop Outdoor Lounge Chairs & Loungers
+Shop Outdoor Dining & Bar Tables
+Shop Outdoor Dining Chairs & Stools
+Shop Outdoor Coffee & Side Tables
+Shop Outdoor Umbrellas & Accessories
+See how real people style their Article furniture. Or as we like to think of it, a bonus room with really, really great natural lighting. While some may say the beauty of an outdoor space is in something obvious, like the trees, at Article we say it’s in having the perfect spot to do all your favorite inside things, outside.
+
+======================================================================     
+7. Ideas and Inspiration | Article
+Date: None
+URL: https://www.article.com/c/Ideas-and-Inspiration
+
+Abstract:
+Rooms, pieces, and layouts to get your design mojo going. Modern Living in a Small Space with Children
+Add Personality to Your Minimalist Themed Decor
+How to Create Modern Multifunctional Rooms
+How to Create the Ultimate Modern Bedroom Retreat
+How to Protect Outdoor Furniture
+What To Buy: Leather vs. Fabric Furniture
+How To Fluff Pillows and Cushions
+How To Choose Leather Furniture
+5 Tips For Choosing Pet-Friendly Furniture
+How To Clean a Fabric Couch (A Definitive Guide)
+How to Clean a Velvet Couch; A Modern Guide
+Order Complimentary Fabric Swatches
+How To Measure Your Space For Delivery
+Learn More About Interior Design Services
+
+======================================================================     
+8. Time to go Pro.
+Date: None
+URL: https://www.article.com/c/pro
+
+Abstract:
+Article Pro is for designers and teams who prefer to self-serve and purchase directly through the website. Simply log in to your Pro account to access discounts, dedicated support, and other perks of the program. Members of o======================================================================     
+8. Time to go Pro.
+Date: None
+URL: https://www.article.com/c/pro
+
+Abstract:
+Article Pro is for designers and teams who prefer to self-serve and purchase directly through the website. Simply log in to your Pro account to access discounts, dedicated support, and other perks of the program. Members of o8. Time to go Pro.
+Date: None
+URL: https://www.article.com/c/pro
+
+Abstract:
+Article Pro is for designers and teams who prefer to self-serve and purchase directly through the website. Simply log in to your Pro account to access discounts, dedicated support, and other perks of the program. Members of oDate: None
+URL: https://www.article.com/c/pro
+
+Abstract:
+Article Pro is for designers and teams who prefer to self-serve and purchase directly through the website. Simply log in to your Pro account to access discounts, dedicated support, and other perks of the program. Members of oURL: https://www.article.com/c/pro
+
+Abstract:
+Article Pro is for designers and teams who prefer to self-serve and purchase directly through the website. Simply log in to your Pro account to access discounts, dedicated support, and other perks of the program. Members of o
+
+Abstract:
+Article Pro is for designers and teams who prefer to self-serve and purchase directly through the website. Simply log in to your Pro account to access discounts, dedicated support, and other perks of the program. Members of oArticle Pro is for designers and teams who prefer to self-serve and purchase directly through the website. Simply log in to your Pro account to access discounts, dedicated support, and other perks of the program. Members of oe directly through the website. Simply log in to your Pro account to access discounts, dedicated support, and other perks of the program. Members of our Pro program can find more detailed information about our shipping options, lead times, and delivery in our Help Center .
+
+======================================================================     
+ur Pro program can find more detailed information about our shipping options, lead times, and delivery in our Help Center .
+
+======================================================================     
+======================================================================     
+9. Jokuna 48" Vinyl Media Unit - Walnut
+Date: None
+URL: https://www.article.com/product/24791/jokuna-48-vinyl-media-unit-walnut
+9. Jokuna 48" Vinyl Media Unit - Walnut
+Date: None
+URL: https://www.article.com/product/24791/jokuna-48-vinyl-media-unit-walnut
+URL: https://www.article.com/product/24791/jokuna-48-vinyl-media-unit-walnut
+
+Abstract:
+Our new version of the popular Jokuna Media Unit features a flip-top lid th
+
+Abstract:
+Our new version of the popular Jokuna Media Unit features a flip-top lid thAbstract:
+Our new version of the popular Jokuna Media Unit features a flip-top lid that accommodates a turntable, with a record sleeve holder to display your chOur new version of the popular Jokuna Media Unit features a flip-top lid that accommodates a turntable, with a record sleeve holder to display your chat accommodates a turntable, with a record sleeve holder to display your chosen LP—we know what matters. With its slatted sliding doors for record storage on one side and space for speakers, an amp, or a gaming console on the other, our Jokuna Vinyl Media Unit is the answer to your overflowing record collection. We’re confident you’ll love your new Article furniture, but just to make sure, you have 30 days to try it out.
+
+
+Saved results to data\news.json
 
 8. Similar-News Detection
 
